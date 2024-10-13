@@ -169,6 +169,18 @@ a {
   margin-top: 0;
 }
 
+.about-container article p .emoji {
+  font-size: 20px;
+}
+
+.about-container article p .emoji.hand-md {
+  display: inline-block;
+}
+
+.about-container article p .emoji.hand-sm {
+  display: none;
+}
+
 .about-container article p svg {
   vertical-align: top;
 }
@@ -346,6 +358,14 @@ a {
 
   .about-container article p svg {
     transform: rotate(90deg);
+  }
+
+  .about-container article p .emoji.hand-md {
+    display: none;
+  }
+  
+  .about-container article p .emoji.hand-sm {
+    display: inline-block;
   }
 
   .about-container,

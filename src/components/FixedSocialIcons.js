@@ -100,10 +100,8 @@ const FixedSocialIcons = () => {
                 </motion.a>
                 <motion.a
                     variants={item}
-                    href="https://facebook.com/kay.ohhdee.790"
+                    href="#f"
                     className="icon-line"
-                    target="_blank"
-                    rel="noopener noreferrer"
                 >
                     <FiFacebook size={20} />
                 </motion.a>
