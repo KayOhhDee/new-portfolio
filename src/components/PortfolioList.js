@@ -187,25 +187,15 @@ const Wrapper = styled.div`
 
     .project-links {
         margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: ${props => props.index % 2 === 0 ? "flex-end" : "flex-start"};
+        gap: 1rem;
 
         a {
             text-decoration: none;
             color: var(--text-color-primary);
             transition: color .3s;
-
-            @media (max-width: 768px) {
-                &:first-child {
-                   margin-right: 1rem;
-                }
-            }
-
-            &:last-child {
-                margin-left: 1rem;
-
-                @media (max-width: 768px) {
-                    margin-left: 0;
-                }
-            }
 
             &:hover {
                 color: var(--color-secondary);

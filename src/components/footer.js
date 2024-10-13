@@ -55,9 +55,7 @@ const Footer = () => {
                         <FiLinkedin size={20} />
                     </a>
                     <a
-                        href="https://facebook.com/kay.ohhdee.790"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="#f"
                     >
                         <FiFacebook size={20} />
                     </a>
