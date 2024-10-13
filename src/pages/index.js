@@ -11,9 +11,9 @@ import OtherProjectsList from "../components/OtherProjectsList"
 import { AiOutlineHtml5 } from "react-icons/ai"
 import { RiCss3Line } from "react-icons/ri"
 import { DiJavascript1 } from "react-icons/di"
-import { FaVuejs, FaWordpressSimple, FaReact } from "react-icons/fa"
+import { FaVuejs, FaReact } from "react-icons/fa"
 import { IoLogoNodejs } from "react-icons/io"
-import { FaRegHandPointRight } from 'react-icons/fa'
+import { IoLogoFirebase } from "react-icons/io5";
 
 import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion"
@@ -24,6 +24,17 @@ const container = {
         opacity: 1,
         transition: {
             delayChildren: 1,
+            staggerChildren: 0.1,
+            when: "beforeChildren"
+        }
+    }
+};
+
+const portfolioContainer = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
             staggerChildren: 0.1,
             when: "beforeChildren"
         }
@@ -78,8 +89,8 @@ const IndexPage = () => {
                     >
                         <motion.h1 variants={item}>Hello, I am</motion.h1>
                         <motion.h2 variants={item}>Kwasi O.Donkor.</motion.h2>
-                        <motion.h3 variants={item}>Frontend Developer.</motion.h3>
-                        <motion.p variants={item} className="hero-text">I am a Frontend Software Engineer who endeavours to construct dynamic and beautiful web applications through code that is carefully crafted and user-centeric design.</motion.p>
+                        <motion.h3 variants={item}>Software Engineer.</motion.h3>
+                        <motion.p variants={item} className="hero-text">I am a Software Engineer who endeavours to construct dynamic and beautiful web applications through code that is carefully crafted and user-centeric design.</motion.p>
                         <motion.div variants={item}>
                             <Button>
                                 <a href="mailto:kod3180@gmail.com">Hire me!</a>
@@ -89,7 +100,7 @@ const IndexPage = () => {
                 )
                 }
             </InView>
-            <InView triggerOnce threshold={0.3}>
+            <InView triggerOnce threshold={0.4}>
                 {({ inView, ref, entry }) => (
                     <motion.section
                         id="about"
@@ -104,11 +115,11 @@ const IndexPage = () => {
                         <div className="about-articles">
                             <article>
                                 <p>
-                                    Hi! My name is Dr. Kwasi Owusu-Donkor. I build beautiful, usable web applications using best practices and the latest W3C web standards. I specialize in front-end development, user experience using modern tools in the build process.
+                                    Hello! <span className="emoji">👋🏽</span> I’m Dr. Kwasi Owusu-Donkor, a pharmacist turned software engineer. I develop robust, scalable web applications focused on usability and performance, utilizing both front-end and back-end technologies to create seamless solutions that enhance user experience.
                                 </p>
-                                <p>I've had the chance to work for an award-winning <a href="https://app.digitalhealthaccess.com/" target="_blank" rel="noreferrer">Health Startup</a> (Health Startup of the year - Ghana StartUp Awards 2021), <a href="https://getrooms.co/" target="_blank" rel="noreferrer">an online room booking service</a>, <a href="https://www.w3msys.com/" target="_blank" rel="noreferrer">a software and brand development company</a> and a few freelance projects.</p>
-                                <p>My goal is to work zealously as a software engineer in a team of amazing people who share the same passion.</p>
-                                <p>Here are few technologies I have worked with{"   "}<FaRegHandPointRight size={22} color="var(--color-secondary)" /></p>
+                                <p>I've had the chance to work with an award-winning <a href="https://hubtel.com/" target="_blank" rel="noreferrer">Fintech company</a> (Fintech Company of the Year - Ghana Fintech Awards 2022), <a href="https://staging.cordtree.org" target="_blank" rel="noreferrer">a non-profit healthcare solution</a>, <a href="https://getrooms.co/" target="_blank" rel="noreferrer">a hostel booking service</a>, and other freelance projects.</p>
+                                <p>My goal is to consistently produce clean, maintainable code that follows industry standards, contributing to the improved quality and reliability of projects.</p>
+                                <p>Here are few technologies I have worked with{"   "}<span className="hand-md emoji">👉🏽</span><span className="hand-sm emoji">👇🏽</span></p>
 
                             </article>
                             <article>
@@ -172,13 +183,13 @@ const IndexPage = () => {
                                             <IoLogoNodejs className="skill-card-icon" />
                                         </a>
                                         <a
-                                            href="https://wordpress.com/"
+                                            href="https://firebase.com/"
                                             className="skill-card"
                                             target="_blank"
                                             rel="noreferrer"
                                         >
-                                            <p>Wordpress</p>
-                                            <FaWordpressSimple className="skill-card-icon" />
+                                            <p>Firebase</p>
+                                            <IoLogoFirebase className="skill-card-icon" />
                                         </a>
                                     </div>
                                 </div>
@@ -209,7 +220,7 @@ const IndexPage = () => {
                         id="portfolio"
                         className="portfolio-container"
                         ref={ref}
-                        variants={container}
+                        variants={portfolioContainer}
                         initial="hidden"
                         animate={inView ? "show" : "hidden"}
                     >
@@ -226,7 +237,7 @@ const IndexPage = () => {
                     <motion.section
                         className="other-projects-container"
                         ref={ref}
-                        variants={container}
+                        variants={portfolioContainer}
                         initial="hidden"
                         animate={inView ? "show" : "hidden"}
                     >
