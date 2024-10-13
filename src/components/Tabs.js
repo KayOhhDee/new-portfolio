@@ -154,33 +154,44 @@ const Tabs = () => {
     const [tabs] = useState([
         {
             id: 0,
-            title: 'W3MSYS',
-            position: 'Frontend Developer',
+            title: 'Hubtel',
+            position: 'Software Engineer',
             content: 'First content',
-            link: "https://www.w3msys.com/",
-            period: 'May 2020 - Present',
-            location: 'Remote',
+            link: "https://hubtel.com/",
+            period: 'Sep 2022 - Present',
+            location: 'WFH',
             description: [
-                'Develop frontend applications to meet customers’ expectations.',
-                'Work with a team of developers to create robust and scalable applications.',
-                'Closely work with designer to create visually appealing applications.',
-                'Integrate backend functionalities into the frontend.',
-                'Keep frontends up to date with latest technological trends.'
+                'Deliver and maintain a high-quality merchant portal serving a variety of businesses and organizations, including Pizzaman-Chickenman, Pharmacy Council Ghana, SportyBet, TV3, Synlab Ghana, Acacia Health Insurance and more.',
+                'Collaborate with designers, project managers, and engineers to turn creative concepts into tangible solutions for clients and stakeholders.',
+                'Mentor junior engineers and national service personnel, providing guidance and support to enhance their skills and professional development.',
             ]
         },
         {
             id: 1,
+            title: 'W3MSYS',
+            position: 'Software Developer',
+            content: 'Second content',
+            link: "https://www.w3msys.com/",
+            period: 'Jun 2020 - May 2022',
+            location: 'Remote',
+            description: [
+                'Designed and implemented a video chat feature within a health-related project using WebRTC technology to enhance user interaction and support.',
+                'Developed and maintained client websites with HTML, CSS, Sass, JavaScript, Vue, React and jQuery, ensuring responsive design and seamless cross-browser functionality.',
+                "Collaborated with designers and developers to ensure a cohesive and consistent user experience across W3MSYS's web applications."
+            ]
+        },
+        {
+            id: 2,
             title: 'GetRooms',
             position: 'Frontend Developer',
-            content: 'Second content',
+            content: 'Third content',
             link: "https://getrooms.co/",
             period: 'January - December 2019',
             location: 'Remote',
             description: [
-                'Contributed to the design phases of the project eg. wireframe and mock stage',
-                'Researched functionality and added value to the project.',
-                'Carried out tasks and communicated effectively with team.',
-                'Updated the application with relevant plugins and code.'
+                'Contributed to the design phases of the project eg. wireframe and mock stage.',
+                'Conducted Quality Assurance tests on site to verify cross-browser compatibility and ensure mobile responsiveness across devices.',
+                'Created an engaging user onboarding journey page to enhance the initial experience for new users.'
             ]
         },
     ])
