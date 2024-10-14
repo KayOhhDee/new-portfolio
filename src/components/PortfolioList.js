@@ -192,6 +192,10 @@ const Wrapper = styled.div`
         justify-content: ${props => props.index % 2 === 0 ? "flex-end" : "flex-start"};
         gap: 1rem;
 
+        @media (max-width: 768px) {
+            justify-content: flex-end;
+        }
+
         a {
             text-decoration: none;
             color: var(--text-color-primary);

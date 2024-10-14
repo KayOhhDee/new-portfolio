@@ -37,7 +37,7 @@ const Wrapper = styled.div`
                 display: flex;
                 position: relative;
                 border: none;
-                border-top: 2px solid var(--text-color-octonary);
+                border-bottom: 2px solid var(--text-color-octonary);
             }
         }
 
@@ -142,9 +142,9 @@ const SelectionBar = styled.div`
     @media (max-width: 600px) {
         left: 0;
         height: 2px;
-        top: -2px;
+        bottom: -2px;
         width: 100px;
-        border-top: 2px solid var(--color-secondary) ;
+        border-bottom: 2px solid var(--color-secondary) ;
         transform: ${props => 'translateX(' + (props.selected * 100) + 'px)'};
     }
 `
