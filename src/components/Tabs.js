@@ -215,7 +215,7 @@ const Tabs = () => {
                     ))}
                 </div>
             </div>
-            <AnimatePresence exitBeforeEnter>
+            <AnimatePresence mode="wait">
                 <motion.div
                     key={selected ? selected : "empty"}
                     className="tabcontent"
